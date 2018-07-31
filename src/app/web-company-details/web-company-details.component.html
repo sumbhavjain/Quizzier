@@ -1,176 +1,87 @@
-<mat-toolbar color="accent">
+<mat-toolbar class="navbar-class">
   <mat-toolbar-row>
     <span>Custom Toolbar</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-toolbar class="sortbar-background">
-  <span class="black-font font">Sort by: &nbsp; &nbsp; &nbsp; </span>
-  <button type="button" class="btn btn-outline-success">Approved</button>
-  &nbsp; &nbsp; &nbsp;
-
-  <button type="button" class="btn btn-outline-danger">Disapproved</button>
-  &nbsp; &nbsp; &nbsp;
-
-  <button type="button" class="btn btn-outline-dark">Pending</button>
+<mat-toolbar>
+    <span class="black-font font">Sort by: &nbsp; &nbsp; &nbsp; </span>
+    <button type="button" class="btn btn-md btn-success">Approved</button>
+    &nbsp; &nbsp; &nbsp;
+    <button type="button" class="btn btn-md btn-danger">Disapproved</button>
+    &nbsp; &nbsp; &nbsp;
+    <button type="button" class="btn btn-md btn-mdb-color">Pending</button>
+    
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
   
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-
-  <form class="form-inline md-form form-sm">
-    <i class="fa fa-search" aria-hidden="true"></i>
-    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" mdbInputDirective>
-  </form>
-</mat-toolbar>  
-<div >
+    <form class="form-inline md-form form-sm">
+      <a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
+      <input class="form-control form-control-sm ml-3 w-95" type="text" placeholder="Search by company name" aria-label="Search" mdbInputDirective>
+    </form>
+  </mat-toolbar> 
+ 
 
 <br>
 <div class="font black-font">
   Company name:
 </div>
 <br>
+
+
 <mat-accordion class="example-headers-align">
-  <mat-expansion-panel opened="false" hideToggle class="sortbar-background pre-modifier">
+  <!-- Company name 1 -->
+  <mat-expansion-panel opened="false" hideToggle>
     <mat-expansion-panel-header>
       <mat-panel-title class="black-font font">
         Company name:
       </mat-panel-title>
       <mat-panel-description>
-          &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-          &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-      <button type="button" class="btn button btn-outline-success"data-toggle="modal" data-target="#basicExample" (click)="frame.show()" mdbWavesEffect>
-          Approve
-      </button>
-      <button type="button" class="btn button btn-outline-danger"data-toggle="modal" data-target="#basicExample" (click)="frame.show()"mdbWavesEffect>
-          Disapprove
-      </button>
+          <div class="col-md-6"></div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-sm btn-outline-success"data-toggle="modal" data-target="#basicExample" (click)="frame1.show()" mdbWavesEffect>
+                  Approve
+              </button>
+          </div>
+          <div class="col-md-2">
+              <button type="button" class="btn btn-sm btn-outline-danger"data-toggle="modal" data-target="#basicExample" (click)="frame2.show()"mdbWavesEffect>
+                  Disapprove
+              </button>
+          </div>
+          <i class="material-icons">
+              keyboard_arrow_down
+          </i>
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <div class="font black-font text-left">
-      Date of registration
-    </div>
-    <div class="font black-font text-center">
-      Username
-    </div>
-    <div class="font black-font text-left">
-      Email id
-    </div>
-    <div class="font black-font text-center">
-      Phone
-    </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6 col-sm-12 font black-font">
+              Date of registration
+            </div>
+            <div class="col-md-6 col-sm-12 font black-font">
+              Username
+            </div>
+            <div class="col-md-6 col-sm-12 font black-font">
+              Email id
+            </div>
+            <div class="col-md-6 col-sm-12 font black-font">
+              Phone
+            </div>
+            <div class="col-md-12 font black-font">
+              Status: {{status}}
+            </div>
+      </div>
+    </div>   
   </mat-expansion-panel>
+  <!-- End of Company name 1 -->
 
-    <mat-expansion-panel opened="false" hideToggle class="sortbar-background pre-modifier">
-        <mat-expansion-panel-header>
-          <mat-panel-title class="black-font font">
-            Company name:
-          </mat-panel-title>
-          <mat-panel-description>
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-            <button type="button" class="btn button btn-outline-success" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-            mdbWavesEffect>Approve</button>
-            <button type="button" class="btn button btn-outline-danger" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-            mdbWavesEffect>Disapprove</button>       
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-          <div class="font black-font text-left">
-            Date of registration
-          </div>
-          <div class="font black-font text-center">
-            Username
-          </div>
-          <div class="font black-font text-left">
-            Email id
-          </div>
-          <div class="font black-font text-center">
-            Phone
-          </div>
-
-      </mat-expansion-panel>
-
-      <mat-expansion-panel opened="false" hideToggle class="sortbar-background pre-modifier">
-        <mat-expansion-panel-header>
-          <mat-panel-title class="black-font font">
-            Company name:
-          </mat-panel-title>
-          <mat-panel-description>
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-            <button type="button" class="btn button btn-outline-success"data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-            mdbWavesEffect>Approve</button>
-            <button type="button" class="btn button btn-outline-danger"data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-            mdbWavesEffect>Disapprove</button>
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <div class="font black-font text-left">
-          Date of registration
-        </div>
-        <div class="font black-font text-center">
-          Username
-        </div>
-        <div class="font black-font text-left">
-          Email id
-        </div>
-        <div class="font black-font text-center">
-          Phone
-        </div>
-      </mat-expansion-panel>
-
-      <mat-expansion-panel opened="false" hideToggle class="sortbar-background pre-modifier">
-        <mat-expansion-panel-header>
-          <mat-panel-title class="black-font font">
-            Company name:
-          </mat-panel-title>
-          <mat-panel-description>
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-            <button type="button" class="btn button btn-outline-success" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-            mdbWavesEffect>Approve</button>
-            <button type="button" class="btn button btn-outline-danger" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-            mdbWavesEffect>Disapprove</button>
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-        <div class="font black-font text-left">
-          Date of registration
-        </div>
-        <div class="font black-font text-center">
-          Username
-        </div>
-        <div class="font black-font text-left">
-          Email id
-        </div>
-        <div class="font black-font text-center">
-          Phone
-        </div>
-      </mat-expansion-panel>     
 </mat-accordion>
-</div>
 
 
-<button type="button" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
-  mdbWavesEffect>Launch Modal</button>
-
-<div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div mdbModal #frame1="mdbModal" class="modal fade left" id="frame1ModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-notify modal-warning modal-side modal-bottom-right" role="document">
     <!--Content-->
@@ -179,7 +90,7 @@
       <div class="modal-header">
         <p class="heading lead">Warning!</p>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame1.hide()">
           <span aria-hidden="true" class="white-text">&times;</span>
         </button>
       </div>
@@ -189,15 +100,49 @@
         <div class="text-center">
           <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
           <p>
-            Are you sure that you want to approve or disapprove ?
+            Are you sure that you want to approve?
           </p>
         </div>
       </div>
 
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect>OK </a>
-        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="frame.hide()">Cancel</a>
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="approveStatus()">OK </a>
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="frame1.hide()">Cancel</a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+<div mdbModal #frame2="mdbModal" class="modal fade left" id="frame2ModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning modal-side modal-bottom-right" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Warning!</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame2.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+          <p>
+            Are you sure that you want to disapprove?
+          </p>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="disapproveStatus()">OK </a>
+        <a type="button" class="btn btn-warning waves-effect" mdbWavesEffect (click)="frame2.hide()">Cancel</a>
       </div>
     </div>
     <!--/.Content-->

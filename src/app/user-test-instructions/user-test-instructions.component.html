@@ -1,0 +1,59 @@
+<button type="button" class="btn btn-rounded btn-outline-primary"data-toggle="modal" data-target="#basicExample" (click)="frame.show()"mdbWavesEffect>
+  Start Test
+</button>
+
+<!-- Central Modal Medium Info -->
+<div mdbModal #frame="mdbModal" class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header modal-color">
+                <h1 class="heading lead">
+                        Instructions
+                </h1>
+    
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+    
+            <!--Body-->
+            <div class="modal-body">
+                <div>
+                    <p>
+                        Before starting the quiz, there are few instructions that need to be followed. 
+                    </p>
+                    <ol>
+                        <li>
+                            &nbsp;There will be x number of questions.
+                        </li>
+                        <li>
+                            &nbsp;Duration of quiz will be of x.
+                        </li>
+                        <li>
+                            &nbsp;Marking Scheme will be +4 for each correct answer and -1 for each incorrect answer
+                        </li>
+                        <li>
+                            &nbsp;No other tab, new window or any browser can be opened.
+                        </li>
+                        <li>
+                            &nbsp;Quiz will be submitted if you try to open a new tab!
+                        </li>
+                        <li>
+                            &nbsp;No changes will be done after submission of quiz.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+    
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+                <a type="button" class="btn btn-primary waves-effect modal-color">I'm ready for test </a>
+                <a type="button" class="btn btn-primary waves-effect modal-color" data-dismiss="modal" (click)="frame.hide()">Not now</a>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+    </div>
+    <!-- Central Modal Medium Info-->
